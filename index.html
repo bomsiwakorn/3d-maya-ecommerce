@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/@mdi/font@4.x/css/materialdesignicons.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/vuetify@2.x/dist/vuetify.min.css" rel="stylesheet">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui">
+  <link rel="stylesheet" href="./css/banner.css">
+  <title>Document</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Prompt:wght@300;400;500;600;700&display=swap');
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Prompt', sans-serif;
+    }
+    </style>
+</head>
+
+<body>
+
+  <!-- <div id="app">
+        <v-app>
+          <v-main>
+            <v-container>
+                <v-btn color="success">text</v-btn>
+            </v-container>
+          </v-main>
+        </v-app>
+      </div> -->
+      <div id="app">
+        <v-app>
+          <section-banner></section-banner> 
+        </v-app>
+      </div>
+
+
+      <!-- <div style="width:300px">
+        <div id="circle">
+          <img data-src="./assets/product1/pump0001.png">
+          <img data-src="./assets/product1/pump0002.png">
+          <img data-src="./assets/product1/pump0003.png">
+          <img data-src="./assets/product1/pump0004.png">
+          <img data-src="./assets/product1/pump0005.png">
+          <img data-src="./assets/product1/pump0006.png">
+          <img data-src="./assets/product1/pump0007.png">
+          <img data-src="./assets/product1/pump0008.png">
+          <img data-src="./assets/product1/pump0009.png">
+          <img data-src="./assets/product1/pump0010.png">
+          <div id="loader"></div>
+        </div> -->
+
+  
+
+  <script src="./components/Banner.js"></script>
+
+  <script
+    src="https://www.cssscript.com/demo/360-degree-image-viewer-with-pure-javascript-circlr/circlr.min.js"></script>
+  <script type="text/javascript">
+    // var crl = circle('circle', {
+    //   scroll: true,
+    //   loader: 'loader'
+    // });
+  </script>
+
+  <script src="https://cdn.jsdelivr.net/npm/vue@2.x/dist/vue.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vuetify@2.x/dist/vuetify.js"></script>
+  <script>
+    import Banner from "./components/Banner.vue"
+    new Vue({
+      el: '#app',
+      vuetify: new Vuetify(),
+    })
+  </script>
+</body>
+
+</html>
