@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/info-product2.css">
+    <title>Vacuum Cleaner Info</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Prompt:wght@300;400;500;600;700&display=swap');
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Prompt', sans-serif;
+        }
+    </style>
+</head>
+
+<body>
+
+    <section>
+        <div id="bg">
+            <div class="container">
+                <div class="card">
+                    <div class="card-bg">
+                        <img src="./assets/vacuumcleaner/info1.png" alt="product" class="shoe show" color="black">
+                        <img src="./assets/vacuumcleaner/info2.png" alt="product" class="shoe" color="blue">
+                        <img src="./assets/vacuumcleaner/info3.png" alt="product" class="shoe" color="green">
+                    </div>
+
+                    <div class="card-info">
+                        <span class="back-page">
+                            <a href="/vacuum-cleaner.html"><i class="fas fa-chevron-left"></i> Back To Product</a>
+                        </span>
+                        <h1>VACUUM CLEANER</h1>
+                        <p class="price">฿1,590</p>
+                        <h4>DESCRIPTION</h4>
+                        <p class="description">
+                            เครื่องดูดไรฝุ่นกำจัดไรฝุ่นฆ่าเชื้อกำจัดฝุ่นได้99% สามารถดูดซับฝุ่นและสารก่อภูมิแพ้ได้ 99%
+                            ฆ่าเชื้อโรคด้วยแสง UV สูงสุด กำจัดไรฝุ่นมากถึง 99.9%
+                        </p>
+                        <h3 class="title-color">COLOR</h3>
+                        <div class="colors">
+                            <span class="color active" primary="#DD5C3C" color="black"></span>
+                            <span class="color" primary="#FFCC81" color="blue"></span>
+                            <span class="color" primary="#d4d4d4" color="green"></span>
+                        </div>
+                        <div class="add-btn">
+                            <a href="#">ADD TO CART</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        const cardBG = document.querySelector('.card-bg');
+        const shoes = document.querySelectorAll('.shoe');
+        const colors = document.querySelectorAll('.color');
+        let startColor = "black";
+
+        function changeColor() {
+            let primary = this.getAttribute('primary');
+            let color = this.getAttribute('color');
+            let shoe = document.querySelector(`.shoe[color="${color}"]`);
+            colors.forEach(c => c.classList.remove('active'));
+            this.classList.add('active');
+            document.documentElement.style.setProperty('--primary', primary);
+            shoes.forEach(s => s.classList.remove('show'));
+            shoe.classList.add('show');
+            startColor = color;
+        }
+        colors.forEach(c => c.addEventListener('click', changeColor));
+    </script>
+
+</body>
+
+</html>

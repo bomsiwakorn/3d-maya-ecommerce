@@ -1,0 +1,167 @@
+:root {
+    --primary: #262827;
+}
+
+#bg {
+    background: linear-gradient(0deg, rgba(217,217,217,1) 0%, rgba(234,234,234,1) 100%);
+    position: relative;
+    z-index: 0;
+}
+.container {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.card {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 900px;
+}
+.card-bg {
+    position: relative;
+    width: 50%;
+    height: 550px;
+    left: 0px;
+    z-index: 8;
+}
+
+.shoe{
+    position: absolute;
+    width: 100%;
+    display: none;
+    top: 0;
+    right: 0;
+    bottom: 0;
+}
+.shoe.show{
+    display: block;
+}
+.card-info {
+    position: relative;
+    width: 50%;
+    height: 550px;
+    background-color: #fff;
+    z-index: 1;
+    padding: 1.6rem 25px;
+    right: 0px;
+}
+.colors .color{
+    display: inline-block;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    margin: 0 10px;
+    margin-top: 10px;
+    border: 5px solid;
+    cursor: pointer;
+    transition: .5s;
+    text-align: left;
+}
+.color[color="black"]{
+    background-color: #000;
+    border-color: #000;
+}
+.color[color="blue"]{
+    background-color: #2465AE;
+    border-color: #2465AE;
+}
+.color[color="green"]{
+    background-color: #3D7C3D;
+    border-color: #3D7C3D;
+}
+.color.active{
+    border-color: #fff;
+    box-shadow: 0 0 10px .5px rgba(0, 0, 0, 0.2);
+    border: 1px solid var(--primary);
+    transform: scale(1.1);
+}
+
+.add-btn a {
+    display: inline-block;
+    margin-top: 2rem;
+    text-decoration: none;
+    font-weight: 500;
+    color: var(--primary);
+    padding: 6px 2rem;
+    font-size: 1.2rem;
+    border-radius: 2px;
+    border: 3px solid var(--primary);
+    transition: .2s ease-in-out;
+}
+.add-btn a:hover {
+    box-shadow: inset 0 200px 0 0 var(--primary);
+    color: #fff;
+}
+.back-page a {
+    font-size: 14px;
+    color: #BDBDBD;
+    text-decoration: none;
+}
+.card-info h1 {
+    font-size: 32px;
+    font-weight: 500;
+    margin-top: 1rem;
+}
+.card-info h4 {
+    font-size: 20px;
+    font-weight: 500;
+    margin-top: 1rem;
+    text-decoration: underline;
+}
+.card-info .description {
+    margin-top: .6rem;
+    color: #747474;
+}
+.card-info .title-color {
+    font-size: 20px;
+    font-weight: 500;
+    margin-top: 1rem;
+    text-decoration: underline;
+}
+.card-info .price {
+    margin-top: 1.5rem;
+}
+@media only screen and (max-width: 940px) {
+    .card {
+        width: 800px;
+    }
+    .card-info {
+        height: 540px;
+    }
+    .card-bg {
+        height: 540px;
+    }
+    .shoe {
+        height: 540px;
+    }
+}
+@media only screen and (max-width: 805px) {
+    .container {
+        width: 100%;
+        height: auto;
+    }
+    .card {
+        position: static !important;
+        display: block;
+        height: auto;
+        width: 100%;
+    }
+    .card-bg {
+        position: static !important;
+        width: 100%;
+        height: auto;
+    }
+    .card-info {
+        position: static !important;
+        height: auto;
+        width: 100%;
+        display: block;
+    }
+    .shoe {
+        position: static !important;
+        width: 100%;
+        height: auto;
+    }
+}
