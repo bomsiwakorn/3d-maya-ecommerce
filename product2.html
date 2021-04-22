@@ -195,6 +195,19 @@
             scroll: true,
             loader: 'loaderAirpump'
         });
+
+        function openNavbar() {
+
+            document.getElementById('bg-navbar-close').style.display = 'block'
+            document.getElementById('wrapper-navbar').style.right = '0px'
+            document.querySelector("html").style.overflow = "hidden";
+        }
+
+        function closeNavbar() {
+            document.getElementById('bg-navbar-close').style.display = 'none'
+            document.getElementById('wrapper-navbar').style.right = '-300px'
+            document.querySelector("html").style.overflow = "auto";
+        }
     </script>
 
 </body>
