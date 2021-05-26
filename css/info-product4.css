@@ -1,0 +1,21 @@
+:root {
+    --primary: #DADADA;
+}
+.color[color="black"]{
+    background: url('../assets/candlewarmer/color1.png') no-repeat;
+    background-position: center;
+    background-size: cover;
+    border-color: #E7E7E7;
+}
+.color[color="blue"]{
+    background: url('../assets/candlewarmer/color2.png') no-repeat;
+    background-position: center;
+    background-size: cover;
+    border-color: #F5F6F6;
+}
+.color[color="green"]{
+    background: url('../assets/candlewarmer/color3.png') no-repeat;
+    background-position: center;
+    background-size: cover;
+    border-color: #E1CEBC;
+}

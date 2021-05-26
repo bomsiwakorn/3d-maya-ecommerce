@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/info-product-all.css">
+    <link rel="stylesheet" href="./css/info-product5.css">
+    <title>Magnetic</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Prompt:wght@300;400;500;600;700&display=swap');
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Prompt', sans-serif;
+        }
+    </style>
+</head>
+
+<body>
+
+    <section>
+        <div id="bg">
+            <div class="container">
+                <div class="card">
+                    <div class="card-bg">
+                        <img src="./assets/magnetic/info1.png" alt="product" class="shoe show" color="black">
+                        <img src="./assets/magnetic/info2.png" alt="product" class="shoe" color="blue">
+                    </div>
+
+                    <div class="card-info">
+                        <span class="back-page">
+                            <a href="/3d-maya-ecommerce/product5.html"><i class="fas fa-chevron-left"></i> Back To
+                                Product</a>
+                        </span>
+                        <h1>LEVITATION DISPLAY</h1>
+                        <p class="price">฿6,500</p>
+                        <h4>DESCRIPTION</h4>
+                        <p class="description">
+                            แท่นแสดงโชว์สินค้าแบบลอยด้วยการปล่อยกระแสแม่เหล็กไฟฟ้าและแสดงสินค้าได้อย่าง
+ชัดเจนด้วยไฟ LED สีขาว
+                        </p>
+                        <h3 class="title-color">COLOR</h3>
+                        <div class="colors">
+                            <span class="color active" primary="#626059" color="black"></span>
+                            <span class="color" primary="#000" color="blue"></span>
+                        </div>
+                        <div class="add-btn">
+                            <a href="#">ADD TO CART</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        const cardBG = document.querySelector('.card-bg');
+        const shoes = document.querySelectorAll('.shoe');
+        const colors = document.querySelectorAll('.color');
+        let startColor = "black";
+
+        function changeColor() {
+            let primary = this.getAttribute('primary');
+            let color = this.getAttribute('color');
+            let shoe = document.querySelector(`.shoe[color="${color}"]`);
+            colors.forEach(c => c.classList.remove('active'));
+            this.classList.add('active');
+            document.documentElement.style.setProperty('--primary', primary);
+            shoes.forEach(s => s.classList.remove('show'));
+            shoe.classList.add('show');
+            startColor = color;
+        }
+        colors.forEach(c => c.addEventListener('click', changeColor));
+    </script>
+
+</body>
+
+</html>

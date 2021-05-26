@@ -1,0 +1,15 @@
+:root {
+    --primary: #000;
+}
+.color[color="black"]{
+    background-color: #000;
+    border-color: #000;
+}
+.color[color="blue"]{
+    background-color: #2465AE;
+    border-color: #2465AE;
+}
+.color[color="green"]{
+    background-color: #3D7C3D;
+    border-color: #3D7C3D;
+}

@@ -1,0 +1,11 @@
+:root {
+    --primary: #626059;
+}
+.color[color="black"]{
+    background-color: #626059;
+    border-color: #626059;
+}
+.color[color="blue"]{
+    background-color: #000;
+    border-color: #000;
+}
